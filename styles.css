@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background: #000928;;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png);
+    padding: 10px 8%;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+nav .logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #fff;
+    background: #db0001;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.lang-btn{
+    display: inline-flex;
+    background: transparent;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 8px 12px;
+}
+.lang-btn img{
+    width: 12px;
+    margin-left: 10px;
+}
+.lang-btn:hover{
+    background: #fff;
+    color: #db0001;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.header-content h3:hover{
+    color: #db0001;
+}
+.header-content p:hover{
+    color: #db0001;
+}
+.email-signup{
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 30px;
+}
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 30px;
+}
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+    background: linear-gradient(333.08deg, #000235 29.2%, #010F42 71.93%, #E40913 111.25%);
+    margin-left: 30px;
+    border-radius: 10px;
+    width: 95%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    align-items: center;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;    
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.features h2{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+hr{
+    width: 100%;
+    background: #01031e;
+    outline: 0;
+    border: 0;
+    height: 8px;
+}
+.faq{
+    padding: 10px 12%;
+    text-align:left;
+}
+.faq h2{
+    font-size: 40px;
+}
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    background: rgba(19, 33, 68, 1);
+}
+.accordian li label:hover{
+    background: rgb(31, 49, 96);
+    transition: transform 0.5s;
+}   
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    transition: transform 0.5s;
+    right: 20px;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordian .content{
+    background: rgba(19, 33, 68, 1);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    transition: max-height 0.5s, padding 0.5s;
+    overflow: hidden;
+}
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 500px;
+    margin: 20px auto 60px;
+    background: #1b1a1a;
+    border: 1px solid #ccc;
+}
+.faq .email-signup input{
+    background: #1b1a1a;
+    color: #eae3e3;
+    font-size: 15px;
+}
+.faq .email-signup input::placeholder{
+    color: #ccc;
+}
+.faq small{
+    margin-left: 22%;
+    font-size: 20px;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px 12%;
+    color: #ccc;
+}
+.footer u{
+    cursor: pointer;
+}
+.footer .col1{
+    margin-top: 40px;
+    width: 50%;
+}
+.footer .col1 ul li{
+    font-size: 14px;
+    list-style: none;
+    padding: 10px 10%;
+    color: #ccc;
+    cursor: pointer;
+}
+.footer .col2{
+    margin-top: 40px;
+    width: 50%;
+}
+.footer .col2 ul li{
+    font-size: 14px;
+    list-style: none;
+    padding: 10px 10%;
+    color: #ccc;
+    cursor: pointer;
+}
+.footer .manage{
+    margin-left: 10%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.name{
+    margin-top: 40px;
+    height: 10vh;
+    margin-left: 38%;
+}
+.name small{
+    font-size: 20px;
+}
+.name small:hover{
+    color:#7084ce;
+}
+.header-content button:hover{
+    background: #fd3640;
+}
